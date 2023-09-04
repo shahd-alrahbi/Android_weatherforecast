@@ -16,10 +16,16 @@ public RecyclerView recyclerView;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
 
-        RecyclerView();
+        recyclerView();
     }
-    private  void RecyclerView(){
+    private  void recyclerView(){
         ArrayList<FutureDomain> items=new ArrayList<>();
+        items.add(new FutureDomain("Sat","storm","storm",25,10));
+        items.add(new FutureDomain("Sun","cloudy","cloudy",25,10));
+        items.add(new FutureDomain("Mon","windy","windy",25,10));
+        items.add(new FutureDomain("Tue","cloudy_sunny","cloudy_sunny",25,10));
+        items.add(new FutureDomain("Wen","sun","Sunny",25,10));
+        items.add(new FutureDomain("Thu","sun","Sunny",25,10));
         items.add(new FutureDomain("Sat","storm","storm",25,10));
         items.add(new FutureDomain("Sun","cloudy","cloudy",25,10));
         items.add(new FutureDomain("Mon","windy","windy",25,10));

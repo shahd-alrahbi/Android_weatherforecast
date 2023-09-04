@@ -35,12 +35,12 @@ public class DomainAdapterFuture extends RecyclerView.Adapter<DomainAdapterFutur
     public void onBindViewHolder(@NonNull DomainAdapterFuture.viewHolder holder, int position) {
         holder.dayTxt.setText(Items.get(position).getDay());
         holder.statusTxt.setText(Items.get(position).getStatus());
-        holder.lowTxt.setText(Items.get(position).getLomTemp());
-        holder.highTxt.setText(Items.get(position).getHighTemp());
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q) {
-            int drawableResourceId=holder.itemView.getResources().getIdentifier(Items.get(position).getPicPath(),"drawable",holder.itemView.getContext().getOpPackageName());
-
-        }
+        holder.lowTxt.setText(Items.get(position).getLomTemp() + "");
+        holder.highTxt.setText(Items.get(position).getHighTemp()+ "");
+//        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q) {
+//            int drawableResourceId=holder.itemView.getResources().getIdentifier(Items.get(position).getPicPath(),"drawable",holder.itemView.getContext().getOpPackageName());
+//
+//        }
 
     }
 

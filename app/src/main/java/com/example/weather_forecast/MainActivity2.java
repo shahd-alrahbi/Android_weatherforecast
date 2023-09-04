@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -17,7 +19,14 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         initRecyclerView();
+        setVarible();
     }
+
+    private void setVarible() {
+        TextView next7dayBtn=findViewById(R.id.day);
+        next7dayBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity2.this,MainActivity3.class)));
+    }
+
     private  void initRecyclerView(){
         ArrayList<Hourly> items=new ArrayList<>();
         items.add(new Hourly("9pm",28,"cloudy"));

@@ -47,6 +47,7 @@
             android:src="@drawable/dots"/>
     </LinearLayout>
   <androidx.cardview.widget.CardView
+      android:id="@+id/card"
       app:layout_constraintTop_toBottomOf="@id/linear2"
         android:layout_width="match_parent"
         android:layout_height="300dp"
@@ -203,18 +204,13 @@
 
   </androidx.cardview.widget.CardView>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="390dp"
-        android:layout_marginBottom="150dp">
-        
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/view2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:nestedScrollingEnabled="true" />
-    </ScrollView>
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card"
+             />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
